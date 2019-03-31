@@ -15,3 +15,5 @@ IG_Password = os.environ(_Password)
 
 Size = 1080, 1080 # width x height
 Interval = 30 # in seconds
+
+AutoCaption = True

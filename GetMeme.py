@@ -54,7 +54,10 @@ def GetImage (_Memes, _ID, _Captions, _LCaps):
     Img.resize (Config.Size, Image.ANTIALIAS)
     Img.save ('Data/meme.jpg')
 
-    Caption = GetCaption (_Captions, _LCaps)
+    if Config.AutoCaption:
+        Caption = GetCaption (_Captions, _LCaps)
+    else:
+        Caption = str (Meme.title)
 
     with open ('Data/lastmeme.txt', 'w') as file:
         file.write (str (Meme.id))
